@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function display() {
+            document.getElementById("myusername").innerHTML = document.getElementById("username").value + "'s Gallery"
+            console.log(document.getElementById("username").value);
+        }
+
+        function setImage(){
+            console.log(document.getElementById('image_url').value);
+            document.getElementById("profiling").style.backgroundImage = "url(" + document.getElementById("image_url").value + ")";
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="flex-top">
+            <div class="flex-item1">
+                <!-- avatar -->
+                <div class="avatar" id="profiling" style="background: rgb(164, 162, 162);"></div>
+                <div style="color: gray; font-weight: bold;" class="usernamehover" id="myusername"><p>Username, Gallery</p></div>
+                <div class="noti">2</div>
+            </div>
+            
+            <div class="flex-item2">
+                <!-- input -->
+                <div><label style="margin-right: 2%;">Username</label><input class="username" type="text" id="username"></input><button style="margin-left: 2%;" onclick="display()">SET</button></div>
+                <div><label style="margin-right: 2%;">Image URL</label><input type="text" id="image_url"></input><button style="margin-left:  2%;" onclick="setImage()">SET</button></div>
+                
+            </div>
+            <div class="gallery" style="margin-top: 10px;">
+                <div class="gallery-item" style="grid-column: span 2 / span 2;"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item" style="grid-row: span 2 / span 2;"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <br>
+            </div>
+        </div>
+        
+    </div>
+    </div>  
+
+    
+</body>
+</html>
